@@ -3,7 +3,6 @@
 
 void led_init(Led *led)
 {
-    __HAL_RCC_GPIOC_CLK_ENABLE();
     // вимикаю діод
     HAL_GPIO_WritePin(
         led->port, led->pin, led->active == GPIO_PIN_SET ? GPIO_PIN_RESET : GPIO_PIN_SET);
